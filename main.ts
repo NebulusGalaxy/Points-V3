@@ -52,6 +52,127 @@ input.onButtonPressed(Button.A, function () {
         music.playMelody("E G F A G A B C5 ", 600)
     }
 })
+input.onButtonPressed(Button.AB, function () {
+    basic.showString("Old Sounds")
+    OPS = 0
+    if (OPS == 0) {
+        basic.showLeds(`
+            . . # . .
+            . # # . .
+            . . # . .
+            . . # . .
+            . # # # .
+            `)
+        music.playMelody("C5 B G G E E C C ", 600)
+        OPS = 1
+        if (OPS == 1) {
+            basic.showLeds(`
+                . # # . .
+                . . . # .
+                . . # . .
+                . # . . .
+                . # # # .
+                `)
+            music.playMelody("C E D G F B A C5 ", 600)
+            OPS = 3
+        }
+        if (OPS == 3) {
+            basic.showLeds(`
+                . # # . .
+                . . . # .
+                . # # . .
+                . . . # .
+                . # # . .
+                `)
+            music.playMelody("F A G B A B C5 C5 ", 600)
+            OPS = 4
+        }
+        if (OPS == 4) {
+            basic.showLeds(`
+                . # . # .
+                . # . # .
+                . # # # .
+                . . . # .
+                . . . # .
+                `)
+            music.playMelody("D F E G B B C5 C5 ", 600)
+            OPS = 5
+        }
+        if (OPS == 5) {
+            basic.showLeds(`
+                . . # # .
+                . # . . .
+                . . # . .
+                . . . # .
+                . # # . .
+                `)
+            music.playMelody("E F D G E B C5 C ", 600)
+            OPS = 6
+            basic.showLeds(`
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                . . . . .
+                `)
+        }
+        basic.showString("New Sounds")
+        if (OPS == 6) {
+            basic.showLeds(`
+                . . # . .
+                . # # . .
+                . . # . .
+                . . # . .
+                . # # # .
+                `)
+            music.playMelody("G G F F E D C C ", 450)
+            OPS = 7
+        }
+        if (OPS == 7) {
+            basic.showLeds(`
+                . # # . .
+                . . . # .
+                . . # . .
+                . # . . .
+                . # # # .
+                `)
+            music.playMelody("C D E F G A B C5 ", 550)
+            OPS = 8
+        }
+        if (OPS == 8) {
+            basic.showLeds(`
+                . # # . .
+                . . . # .
+                . # # . .
+                . . . # .
+                . # # . .
+                `)
+            music.playMelody("G B A B G A B C5 ", 600)
+            OPS = 9
+        }
+        if (OPS == 9) {
+            basic.showLeds(`
+                . # . # .
+                . # . # .
+                . # # # .
+                . . . # .
+                . . . # .
+                `)
+            music.playMelody("C C E F G A C5 C5 ", 600)
+            OPS = 10
+        }
+        if (OPS == 10) {
+            basic.showLeds(`
+                . . # # .
+                . # . . .
+                . . # . .
+                . . . # .
+                . # # . .
+                `)
+            music.playMelody("E G F A G A B C5 ", 600)
+        }
+    }
+})
 input.onButtonPressed(Button.B, function () {
     if (Hand == _1) {
         _1 = randint(6, 10)
@@ -299,6 +420,7 @@ input.onButtonPressed(Button.B, function () {
         }
     }
 })
+let OPS = 0
 let _5 = 0
 let _4 = 0
 let _3 = 0
